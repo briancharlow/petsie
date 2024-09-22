@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Facebook, Instagram } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faGoogle,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
 import catImage from "../../images/cat white background.jpg";
 import "./sign.css"; // Import the CSS file
 
@@ -26,21 +32,24 @@ const SignupPage = () => {
       <div className="form-container">
         <h2 className="form-title">Sign Up</h2>
         <form onSubmit={handleSubmit} className="signup-form">
+          <div className="petname">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+          </div>
           <input
-            type="text"
-            name="firstName"
-            placeholder="First Name"
-            value={formData.firstName}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Last Name"
-            value={formData.lastName}
-            onChange={handleChange}
-          />
-          <input
+            className="form-input"
             type="email"
             name="email"
             placeholder="Email"
@@ -48,6 +57,7 @@ const SignupPage = () => {
             onChange={handleChange}
           />
           <input
+            className="form-input"
             type="password"
             name="password"
             placeholder="Password"
@@ -55,6 +65,7 @@ const SignupPage = () => {
             onChange={handleChange}
           />
           <select
+            className="form-input"
             name="petFamily"
             value={formData.petFamily}
             onChange={handleChange}
@@ -73,12 +84,14 @@ const SignupPage = () => {
         <div className="oauth-container">
           <p>Or sign up with:</p>
           <div className="oauth-buttons">
-            <button className="oauth-button google">G</button>
+            <button className="oauth-button google">
+              <FontAwesomeIcon icon={faGoogle} />
+            </button>
             <button className="oauth-button facebook">
-              <Facebook size={20} />
+              <FontAwesomeIcon icon={faFacebook} />
             </button>
             <button className="oauth-button instagram">
-              <Instagram size={20} />
+              <FontAwesomeIcon icon={faInstagram} />
             </button>
           </div>
         </div>
