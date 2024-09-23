@@ -6,7 +6,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import catImage from "../../images/cat white background.jpg";
+import catImage from "../../images/cat couples.jpg";
 import "./sign.css"; // Import the CSS file
 
 const SignupPage = () => {
@@ -81,28 +81,28 @@ const SignupPage = () => {
             Sign Up
           </button>
         </form>
-        <div className="oauth-container">
-          <p>Or sign up with:</p>
+        <br />
+        <fieldset className="oauth-container">
+          <legend>Or sign up with</legend>
           <div className="oauth-buttons">
-            <button className="oauth-button google">
+            <button className="google">
               <FontAwesomeIcon icon={faGoogle} />
             </button>
-            <button className="oauth-button facebook">
+            <button className="facebook">
               <FontAwesomeIcon icon={faFacebook} />
             </button>
-            <button className="oauth-button instagram">
+            <button className="instagram">
               <FontAwesomeIcon icon={faInstagram} />
             </button>
           </div>
-        </div>
+        </fieldset>
       </div>
-      <div className="image-container">
-        <img
-          src={catImage}
-          alt="White cat with green eyes"
-          className="cat-image"
-        />
-      </div>
+
+      <img
+        src={catImage}
+        alt="White cat with green eyes"
+        className="cat-image"
+      />
     </div>
   );
 };
