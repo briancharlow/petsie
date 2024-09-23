@@ -28,13 +28,28 @@ body {
   width: 100%;
   max-width: 32rem;
 }
-.signup-form input,
-select,
-button {
+
+.signup-form input {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: none;
+  background-color: #eaeff2;
+}
+.submit-button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+select {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eaeff2;
+  margin-bottom: 10px;
 }
 .petname {
   display: flex;
@@ -43,17 +58,35 @@ button {
 }
 .oauth-container {
   display: flex;
-  width: 15rem;
+  width: 23rem;
   /* max-width: 23rem; */
   border-radius: 5px;
   align-self: flex-start;
-  margin-left: 8rem;
+  outline: 4px;
+  justify-content: center;
+  background-color: #eaeff2;
 }
 .oauth-buttons {
   display: flex;
-  justify-content: center; /* Center the buttons */
-  /* align-items: center; */
+  /* Center the buttons */
+  align-items: center;
   gap: 2rem;
+}
+.instagram,
+.google,
+.facebook {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.instagram {
+  background-color: rgb(196, 102, 35);
+}
+.google {
+  background-color: white;
+}
+.facebook {
+  background-color: blue;
 }
 .cat-image {
   flex: 1;
@@ -63,4 +96,7 @@ button {
   border-radius: 2rem;
   margin-bottom: 0;
   max-width: 35rem;
+}
+legend {
+  color: blue;
 }
