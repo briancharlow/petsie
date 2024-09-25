@@ -72,6 +72,17 @@ select {
   align-items: center;
   gap: 2rem;
 }
+.oauth-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.oauth-buttons button:hover {
+  opacity: 0.8;
+}
 .instagram,
 .google,
 .facebook {
@@ -79,14 +90,25 @@ select {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.instagram {
-  background-color: rgb(196, 102, 35);
-}
 .google {
-  background-color: white;
+  background-color: #ea4335;
+  color: white;
 }
 .facebook {
-  background-color: blue;
+  background-color: #1877f2;
+  color: white;
+}
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  color: white;
 }
 .cat-image {
   flex: 1;
